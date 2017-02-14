@@ -3,7 +3,8 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background:url('https://cdn.shutterstock.com/shutterstock/videos/884632/thumb/1.jpg') no-repeat;
+  background-size: cover;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -25,3 +26,6 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+/*dance http://www.animatedimages.org/data/media/107/animated-dancing-image-0243.gif*/
+ /*beyonce https://31.media.tumblr.com/ce27425fa583c8f73d98ca9dc56716d6/tumblr_inline_n4i9fiD9LB1rr8huq.gif*/
