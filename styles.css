@@ -24,10 +24,10 @@ body, a:link, a:visited, a:active{
 .dancer{
   border:10px solid red;
   border-radius:10px;
-  position:absolute;
+  position: absolute;
 }
 .beyonce{
-  position: relative;
+  position: relative; 
 }
 .minion{
   position: relative;
