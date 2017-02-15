@@ -31,6 +31,16 @@ body, a:link, a:visited, a:active{
 }
 .minion{
   position: relative;
+  animation-name: minion;
+  animation-duration: 4s;
+}
+
+@keyframes minion {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
 }
 
 /*dance http://www.animatedimages.org/data/media/107/animated-dancing-image-0243.gif*/

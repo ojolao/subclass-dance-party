@@ -12,8 +12,8 @@ MinionDancer.prototype.constructor = MinionDancer;
 MinionDancer.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step
   Dancer.prototype.step.call(this);
-  this.slide();
-  this.jump();
+  //this.slide();
+  //this.jump();
   //ClassicDancer.prototype.slide.call(this);
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
