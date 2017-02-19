@@ -35,11 +35,12 @@ Dancer.prototype.setPosition = function(top, left) {
 };
 
 Dancer.prototype.lineUp = function(top, left) {
+  clearTimeout(timer);
   this.setPosition(top, left);
   this.$node.css({position: 'absolute'});
   // //this.$node.stop();
   // //this.$node.clearQueue();
-  // // clearTimeout(timer);
+
   // //this.$node.toggle();
   // this.shouldBeStill = false;
   // debugger;

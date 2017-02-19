@@ -13,7 +13,7 @@ MinionDancer.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step
   Dancer.prototype.step.call(this);
   //this.slide();
-  //this.jump();
+  this.jump();
   //ClassicDancer.prototype.slide.call(this);
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
@@ -22,6 +22,6 @@ MinionDancer.prototype.step = function() {
 };
 
 MinionDancer.prototype.jump = function() {
-  this.$node.animate({top: '+=300'}, 2000);
-  this.$node.animate({top: '-=300'}, 1000);
+  this.$node.animate({top: '+=50'}, 250);
+  this.$node.animate({top: '-=50'}, 250);
 };

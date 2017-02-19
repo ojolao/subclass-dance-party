@@ -34,9 +34,14 @@ $(document).ready(function() {
   $('.lineUpButton').on('click', function(event) {
     for (var i = 0; i < window.dancers.length; i++) {
       var top = 100;
-      var left = 100; //+ (i * 100);
+      var left = 100 + (i * 50);
       window.dancers[i].lineUp(top, left);
     }
+  });
+
+  $('body').on('mouseenter', '.minion', function() {
+    console.log(this);
+    $(this).toggleClass('one'); 
   });
 
 });
