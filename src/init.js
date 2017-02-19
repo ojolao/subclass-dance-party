@@ -43,7 +43,7 @@ $(document).ready(function() {
     for (var i = 0; i < window.dancers.length; i++) {
       var top1 = $('body').height() * Math.random();
       var left1 = $('body').width() * Math.random();
-      window.dancers[i].scatter(top1, left1);
+      window.dancers[i].setPosition(top1, left1);
     }
   });
 
@@ -52,5 +52,45 @@ $(document).ready(function() {
     $(this).toggleClass('one'); 
   });
 
+  $('body').on('mouseover', '.beyonce', function() {
+    var min = Infinity; 
+    var closest = null;
+    var beyonce = $(this)[0];
+    var currentTopString = beyonce.style.top;
+    var currentTop = Number(currentTopString.substring(0, currentTopString.length - 2));
+    var currentLeftString = beyonce.style.left;
+    var currentLeft = Number(currentLeftString.substring(0, currentLeftString.length - 2));
+    for (var i = 0; i < window.dancers.length; i++) {
+      if (window.dancers[i].constructor === ClassicDancer) {
+        continue;
+      }
+      var topString = window.dancers[i].$node[0].style.top;
+      var top = Number(topString.substring(0, topString.length - 2));
+      var leftString = window.dancers[i].$node[0].style.left;
+      var left = Number(leftString.substring(0, leftString.length - 2));
+      var val = (top - currentTop) * (top - currentTop) + (left - currentLeft) * (left - currentLeft);
+      if (val < min) {
+        min = val;
+        closest = window.dancers[i];
+        console.log('closest is ' + closest);
+      }
+    }
+    if (closest !== null) {
+      var closestTop = Number(closest.$node[0].style.top.substring(0, closest.$node[0].style.top.length - 2));
+      var closestLeft = Number(closest.$node[0].style.left.substring(0, closest.$node[0].style.left.length - 2));
+
+      var topDiff = closestTop - currentTop;
+      var leftDiff = closestLeft - currentLeft;
+      console.log('closest is at ' + topDiff + ', ' + leftDiff);
+
+      var move = {
+        'transform': 'translate(' + leftDiff + 'px,' + topDiff + 'px)',
+        'transition-duration': '2s'
+      };
+      $(this).css(move);
+      setTimeout(closest.$node.toggleClass('one'));
+    }
+
+  });
 });
 

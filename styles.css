@@ -27,10 +27,10 @@ body, a:link, a:visited, a:active{
   position: absolute;
 }
 .beyonce{
-  position: relative; 
+  position: absolute; 
 }
 .minion{
-  position: relative;
+  position: absolute;
 }
 
 @keyframes minion {
@@ -40,6 +40,7 @@ body, a:link, a:visited, a:active{
     75%  {background-color:green; -webkit-filter: brightness(100%)}
     100% {background-color:purple; -webkit-filter: brightness(200%)}
 }
+
 
 .one { 
   animation-name: minion;

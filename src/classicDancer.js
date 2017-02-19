@@ -18,8 +18,8 @@ ClassicDancer.prototype.step = function() {
   // this.$node.toggle();
 };
 ClassicDancer.prototype.slide = function() {
-  this.$node.animate({left: '+=300'}, 2000);
-  this.$node.animate({left: '-=300'}, 1000);
+  this.$node.animate({left: '+=100'}, 2000);
+  this.$node.animate({left: '-=100'}, 1000);
 };
 
 

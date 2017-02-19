@@ -6,7 +6,7 @@ var Dancer = function(top, left, timeBetweenSteps) {
   this.$node = $('<span class="dancer"></span>');
   // this.shouldBeStill = true;
   this.step();
-  this.setPosition(top, left);
+  //this.setPosition(top, left);
 
   
 };
@@ -18,8 +18,7 @@ Dancer.prototype.step = function() {
   // it just schedules the next step
   //debugger;
   // if (this.shouldBeStill) {
-  timer = setTimeout(this.step.bind(this), this.timeBetweenSteps);
-  // }
+  timer = setTimeout(this.step.bind(this), this.timeBetweenSteps);  // }
 };
 
 
@@ -37,7 +36,7 @@ Dancer.prototype.setPosition = function(top, left) {
 Dancer.prototype.lineUp = function(top, left) {
   //this.clearTimeout(timer);
   this.setPosition(top, left);
-  this.$node.css({position: 'absolute'});
+  //this.$node.css({position: 'absolute'});
   // //this.$node.stop();
   // //this.$node.clearQueue();
 
@@ -47,10 +46,11 @@ Dancer.prototype.lineUp = function(top, left) {
   // console.log(this);
   // this.$node.animate({left: '300'}, 2000);
 };
-Dancer.prototype.scatter = function (top, left) {
-  this.setPosition(top, left);
-  this.$node.css({position: 'relative'});
-};
+// Dancer.prototype.scatter = function (top, left) {
+//   this.setPosition(top, left);
+//   //this.$node.css({position: 'relative'});
+// };
+
 
 // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
 // this one sets the position to some random default point within the body
