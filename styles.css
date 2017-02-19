@@ -34,16 +34,16 @@ body, a:link, a:visited, a:active{
 }
 
 @keyframes minion {
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:yellow; left:100px; top:0px;}
-    50%  {background-color:blue; left:100px; top:100px;}
-    75%  {background-color:green; left:0px; top:100px;}
-    100% {background-color:red; left:0px; top:0px;}
+    0%   {background-color:red; -webkit-filter: brightness(20%);}
+    25%  {background-color:yellow; -webkit-filter: brightness(50%);}
+    50%  {background-color:blue; -webkit-filter: brightness(75%)}
+    75%  {background-color:green; -webkit-filter: brightness(100%)}
+    100% {background-color:purple; -webkit-filter: brightness(200%)}
 }
 
 .one { 
   animation-name: minion;
-  animation-duration: 4s;
+  animation-duration: 2s;
 }
 
 

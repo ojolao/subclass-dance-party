@@ -35,7 +35,7 @@ Dancer.prototype.setPosition = function(top, left) {
 };
 
 Dancer.prototype.lineUp = function(top, left) {
-  clearTimeout(timer);
+  //this.clearTimeout(timer);
   this.setPosition(top, left);
   this.$node.css({position: 'absolute'});
   // //this.$node.stop();
@@ -46,6 +46,10 @@ Dancer.prototype.lineUp = function(top, left) {
   // debugger;
   // console.log(this);
   // this.$node.animate({left: '300'}, 2000);
+};
+Dancer.prototype.scatter = function (top, left) {
+  this.setPosition(top, left);
+  this.$node.css({position: 'relative'});
 };
 
 // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
