@@ -88,7 +88,7 @@ $(document).ready(function() {
         'transition-duration': '2s'
       };
       $(this).css(move);
-      setTimeout(closest.$node.toggleClass('one'));
+      closest.$node.toggleClass('one');
     }
 
   });
