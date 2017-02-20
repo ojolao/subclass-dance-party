@@ -72,7 +72,7 @@ $(document).ready(function() {
       if (val < min) {
         min = val;
         closest = window.dancers[i];
-        console.log('closest is ' + closest);
+        //console.log('closest is ' + closest);
       }
     }
     if (closest !== null) {
